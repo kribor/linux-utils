@@ -21,3 +21,7 @@ systemctl start node_exporter
 systemctl enable node_exporter
 sleep 5
 systemctl status node_exporter
+
+echo "If you are running FirewallD and need to open the port, run the following:"
+echo "firewall-cmd --zone=public --add-port=9100/tcp --permanent"
+echo "firewall-cmd --reload"
