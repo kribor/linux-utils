@@ -19,6 +19,7 @@ chown node_exporter:node_exporter /var/log/node_exporter
 # Install init script
 # init script requires daemonize
 # Requires epel repo
+yum install -y epel-release
 yum install -y daemonize
 
 cd $rundir
