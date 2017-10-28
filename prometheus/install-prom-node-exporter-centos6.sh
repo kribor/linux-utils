@@ -1,5 +1,5 @@
 #NOTE: needs to be run from this folder
-rundir=${pwd}
+rundir=$(pwd)
 
 # Create user
 sudo useradd --no-create-home --shell /bin/false node_exporter

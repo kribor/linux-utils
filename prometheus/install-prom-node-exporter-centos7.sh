@@ -1,5 +1,5 @@
 #NOTE: needs to be run from this folder
-rundir=${pwd}
+rundir=$(pwd)
 
 #Prepare user
 sudo useradd --no-create-home --shell /bin/false node_exporter
@@ -15,7 +15,6 @@ rm -rf node_exporter-*
 #Install systemd script
 cd $rundir
 cp ../init-scripts/centos7/node_exporter.service /etc/systemd/system/
-cp ../init-scripts/centos7/node_exporter.service
 
 systemctl daemon-reload
 systemctl start node_exporter
