@@ -5,10 +5,9 @@ rundir=${pwd}
 sudo useradd --no-create-home --shell /bin/false node_exporter
 
 #Download binary and install
-mkdir /root/download/
-cd /root/download/
+cd /tmp
 curl -LO https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-amd64.tar.gz
-tar -xzf /root/download/node_exporter*
+tar -xzf node_exporter*
 cp node_exporter-*/node_exporter /usr/local/bin
 chown node_exporter:node_exporter /usr/local/bin/node_exporter
 rm -rf node_exporter-*
