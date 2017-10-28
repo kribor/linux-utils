@@ -1,4 +1,7 @@
-#Node exporter
+#NOTE: needs to be run from this folder
+rundir=${pwd}
+
+# Create user
 sudo useradd --no-create-home --shell /bin/false node_exporter
 
 #Download binary and install
@@ -19,6 +22,7 @@ chown node_exporter:node_exporter /var/log/node_exporter
 # Requires epel repo
 yum install -y daemonize
 
+cd $rundir
 cp ../init-scripts/centos6/node_exporter /etc/init.d/
 chmod +x /etc/init.d/node_exporter
 
