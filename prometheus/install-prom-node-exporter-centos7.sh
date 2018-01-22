@@ -6,9 +6,9 @@ sudo useradd --no-create-home --shell /bin/false node_exporter
 
 #Download and install binary
 cd /tmp
-curl -LO https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-amd64.tar.gz
+curl -LO https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-amd64.tar.gz
 tar -xzf node_exporter-*
-cp node_exporter-*/node_exporter /usr/local/bin
+cp -f node_exporter-*/node_exporter /usr/local/bin
 chown node_exporter:node_exporter /usr/local/bin/node_exporter
 rm -rf node_exporter-*
 
